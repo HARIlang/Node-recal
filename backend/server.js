@@ -15,6 +15,8 @@ const server = http.createServer((req,res)=>{ // creating the server
       
 
     }
+    else if(req.url=="contact" && method==="GET"){  // contact page using the get  method       res.end("contact page");
+    }
 });
 server.listen(port,()=>{     // running the server 
 
