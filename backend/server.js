@@ -15,7 +15,9 @@ const server = http.createServer((req,res)=>{ // creating the server
       
 
     }
-    else if(req.url=="contact" && method==="GET"){  // contact page using the get  method       res.end("contact page");
+    else if(req.url=="/contact" && req.method==="GET"){ 
+        
+      res.end("contact page");                    // contact page using the get  method 
     }
     else{                                           // error 404 page is added
         res.statusCode = 404;
