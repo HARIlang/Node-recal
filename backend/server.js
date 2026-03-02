@@ -3,13 +3,18 @@ const port = 8000;
 const server = http.createServer((req,res)=>{ // creating the server
 
   
-    if(req.url==="/" && req.method==="GET"){
+    if(req.url==="/" && req.method==="GET"){          // home page using get method
 
      res.end("this is home page");
 
     }
     
+    else if(req.url==="/about" && req.method ==="GET"){   // about page using the get 
+     
+         res.end("about page");
+      
 
+    }
 });
 server.listen(port,()=>{     // running the server 
 
